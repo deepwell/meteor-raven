@@ -28,3 +28,13 @@ Optionally you can pass a tag:
 <pre>
 RavenLogger.log('Testing error message', { component: 'system' });
 </pre>
+
+If you are using the Meteor Accounts package, you can enable user tracking on errors:
+<pre>
+RavenLogger.initialize({
+  client: 'your client DSN here',
+  server: 'your server DSN here'
+}, {
+  trackUser: true
+});
+</pre>

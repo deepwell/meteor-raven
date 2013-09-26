@@ -18,6 +18,7 @@
 
         // Meteor
         "Meteor",
+        "Npm",
         "Package",
         "Tinytest",
 
