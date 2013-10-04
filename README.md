@@ -1,10 +1,9 @@
 Raven
 ============
 
-Raven/Sentry integration for Meteor.
-Includes raven-js for frontend logging and raven for backend logging.
+Raven/Sentry integration for Meteor. Includes raven-js for frontend logging and raven for backend logging.
 
-Provides consolidated logging to Raven/Sentry from both the client and the server.
+Provides consolidated error logging to Raven/Sentry from both the client and the server.
 
 This package is MIT Licensed. Do whatever you like with it but any responsibility for doing so is your own.
 
@@ -16,6 +15,7 @@ RavenNode: https://github.com/mattrobenolt/raven-node
 
 Usage
 ============
+Configure your client and server DSN keys and log an error message.
 <pre>
 RavenLogger.initialize({
   client: 'your client DSN here',
@@ -37,4 +37,9 @@ RavenLogger.initialize({
 }, {
   trackUser: true
 });
+</pre>
+
+Raven also works very well with saving full error and exception stack traces. Simply pass an Error or a Meteor.Error object to the log method to keep the stack trace.
+<pre>
+RavenLogger.log(new Meteor.Error(422, 'Failed to save object to database'));
 </pre>
