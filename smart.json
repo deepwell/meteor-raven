@@ -2,7 +2,7 @@
   "name": "raven",
   "description": "Raven/Sentry integration in both the client and server. Consolidated logging.",
   "homepage": "https://github.com/deepwell/meteor-raven",
-  "author": "Mark Deepwell <mark@stage3systems.com>",
+  "author": "Mark Deepwell <mark@markdeepwell.com>",
   "version": "0.1.3",
   "git": "https://github.com/deepwell/meteor-raven.git",
   "packages": {}
