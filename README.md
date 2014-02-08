@@ -15,11 +15,12 @@ RavenNode: https://github.com/mattrobenolt/raven-node
 
 Usage
 ============
-Configure your client and server DSN keys and log an error message.
+Configure your client and server DSN keys and log an error message. For the
+client entry, don't include your private key. For the server entry, **include your private key.**
 <pre>
 RavenLogger.initialize({
-  client: 'your client DSN here',
-  server: 'your server DSN here'
+  client: 'https://public_key@app.getsentry.com/app_id',            // Do not include your private key here
+  server: 'https://public_key:private_key@app.getsentry.com/app_id' // *DO* include your private key here
 });
 RavenLogger.log('Testing error message');
 </pre>
