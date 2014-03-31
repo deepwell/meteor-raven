@@ -1,17 +1,11 @@
 Raven
 ============
 
-Raven/Sentry integration for Meteor. Includes raven-js for frontend logging and raven for backend logging.
+Raven/[Sentry](https://www.getsentry.com) integration for Meteor. Includes [Raven.js](https://github.com/getsentry/raven-js) for frontend logging and [raven-node](https://github.com/mattrobenolt/raven-node) for backend logging.
 
-Provides consolidated error logging to Raven/Sentry from both the client and the server.
+Provides consolidated error logging to Sentry via Raven from both the client and the server.
 
-This package is MIT Licensed. Do whatever you like with it but any responsibility for doing so is your own.
-
-All rights to raven are with the original authors.
-
-RavenJS: http://raven-js.readthedocs.org/
-
-RavenNode: https://github.com/mattrobenolt/raven-node
+This package is MIT Licensed. Do whatever you like with it but any responsibility for doing so is your own. All rights to raven are with the original authors.
 
 Usage
 ============
