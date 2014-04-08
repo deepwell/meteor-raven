@@ -34,6 +34,19 @@ RavenLogger.initialize({
 });
 </pre>
 
+To catch uncaught exceptions on the server, set patchGlobal to true or a function:
+<pre>
+RavenLogger.initialize({
+  client: 'your client DSN here',
+  server: 'your server DSN here'
+}, {
+  patchGlobal: function() {
+    console.log('Bye, bye, world');
+    process.exit(1);
+  }
+});
+</pre>
+
 Raven also works very well with saving full error and exception stack traces. Simply pass an Error or a Meteor.Error object to the log method to keep the stack trace.
 <pre>
 RavenLogger.log(new Meteor.Error(422, 'Failed to save object to database'));
