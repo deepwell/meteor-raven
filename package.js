@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Npm.depends({
-  'raven': '0.6.0'
+  'raven': '0.6.3'
 });
 
 Package.on_use(function (api, where) {

@@ -1,21 +1,19 @@
 {
   "dependencies": {
     "raven": {
-      "version": "0.6.0",
+      "version": "0.6.3",
       "dependencies": {
         "node-uuid": {
-          "version": "1.4.0"
+          "version": "1.4.1"
         },
-        "raw-stacktrace": {
-          "version": "1.0.0",
-          "dependencies": {
-            "traceback": {
-              "version": "0.3.0"
-            },
-            "underscore": {
-              "version": "1.5.2"
-            }
-          }
+        "stack-trace": {
+          "version": "0.0.7"
+        },
+        "lsmod": {
+          "version": "0.0.3"
+        },
+        "cookie": {
+          "version": "0.1.0"
         }
       }
     }
