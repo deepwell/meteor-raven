@@ -1,24 +1,23 @@
 Package.describe({
-  summary: 'Integrate with Raven JS for JavaScript errors and logs'
+  summary: 'Integrate with Raven JS for JavaScript errors and logs',
+  version: '0.2.3',
+  name: 'deepwell:raven',
+  git: 'https://github.com/deepwell/meteor-raven.git'
 });
 
 Npm.depends({
   'raven': '0.7.2'
 });
 
-Package.on_use(function (api, where) {
-  api.add_files('lib/main.js', [ 'client', 'server' ]);
-  api.add_files('vendor/raven.js', 'client');
+Package.onUse(function (api, where) {
+  api.versionsFrom('METEOR@0.9.0');
+  api.addFiles('lib/main.js', [ 'client', 'server' ]);
+  api.addFiles('vendor/raven.js', 'client');
 
-  /**
-   * Export the if meteor >= 0.6.5
-   */
-  if (typeof api.export !== 'undefined') {
-    api.export([
-      'RavenLogger'
-    ], [
-      'client',
-      'server'
-    ]);
-  }
+  api.export([
+    'RavenLogger'
+  ], [
+    'client',
+    'server'
+  ]);
 });
