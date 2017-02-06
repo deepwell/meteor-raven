@@ -1,18 +1,19 @@
 Package.describe({
   summary: 'Integrate with Raven JS for JavaScript errors and logs',
-  version: '0.3.0',
+  version: '0.3.1',
   name: 'deepwell:raven',
   git: 'https://github.com/deepwell/meteor-raven.git'
 });
 
 Npm.depends({
-  'raven': '0.7.2'
+  'raven': '1.1.1',
+  'raven-js': '3.10.0',
 });
 
-Package.onUse(function (api, where) {
-  api.versionsFrom('METEOR@0.9.0');
-  api.addFiles('lib/main.js', [ 'client', 'server' ]);
-  api.addFiles('vendor/raven.js', 'client');
+Package.onUse(function (api) {
+  api.versionsFrom('METEOR@1.4.2.3');
+  api.use('ecmascript');
+  api.mainModule('lib/main.js', [ 'client', 'server' ]);
 
   api.export([
     'RavenLogger'
